@@ -10,32 +10,31 @@ export const SliderData = [
   {
     title: 'Conforto total',
     price: 'R$3999,90',
-    path: '//www.dt3office.com.br/loja/scuderia/cadeira-de-escritorio-zodiac/',
-    label: 'Saiba Mais',
+    
+    label: <a href="//www.dt3office.com.br/loja/scuderia/cadeira-de-escritorio-zodiac/"Saiba Mais'</a>
     image: ImageOne,
     alt: 'House'
   },
   {
     title: 'Durabilidade',
     price: 'R$2999,90',
-    path: '//www.dt3sports.com.br/loja/elite-series/cadeira-gamer-dt3sports-royce-tecido/',
-    label: 'Saiba Mais',
+    
+    label: <a href="//www.dt3sports.com.br/loja/elite-series/cadeira-gamer-dt3sports-royce-tecido/"Saiba Mais'</a>
     image: ImageTwo,
     alt: 'House'
   },
   {
     title: 'Para o campeão',
     price: 'R$2999,90',
-    path: '//www.dt3sports.com.br/loja/elite-series/cadeira-gamer-dt3sports-orion-flamengo/',
-    label: 'Saiba Mais',
+    
+    label: <a href="//www.dt3sports.com.br/loja/elite-series/cadeira-gamer-dt3sports-orion-flamengo/"Saiba Mais'</a>
     image: ImageThree,
     alt: 'House'
   },
   {
     title: 'Feita para todos',
     price: '$3999,90',
-    path: '//www.dt3office.com.br/loja/scuderia/iryna-se/',
-    label: 'Saiba Mais',
+    label: <a href='//www.dt3office.com.br/loja/scuderia/iryna-se/'Saiba Mais'</a>
     image: ImageFour,
     alt: 'House'
   }
