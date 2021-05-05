@@ -97,7 +97,7 @@ A formação da classe operária demandou uma série de necessidades que nem sem
               Na imagem, temos os anarquistas de Chicago condenados à execução como responsáveis pela explosão da bomba em 04 de maio de 1886
               </p>
               <Button><a href='//brasilescola.uol.com.br/datas-comemorativas/dia-do-trabalho.htm'rel='noopener noreferrer'target="_blank">
-                 Saiba Mais<a /></Button>
+                 Saiba Mais</a></Button>
             </Content>
           </ColumnLeft>
           <ColumnRight>
