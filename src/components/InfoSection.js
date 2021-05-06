@@ -84,8 +84,7 @@ const InfoSection = ({
           <h1>{heading}</h1>
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          <button><a href="https://www.dt3office.com.br/loja/acessorios/apoio-de-pe-efr02c-dt3office/" rel="noopener noreferrer" target="_blank">
-                 Acessório Ergonômico</a></button>
+          <strong><strong><h2><a href="https://www.dt3office.com.br/loja/acessorios/apoio-de-pe-efr02c-dt3office/" target="_blank">Acessório Ergonômico</a></h2></strong></strong>
           </ColumnLeft>
           
         <ColumnRight reverse={reverse}>
