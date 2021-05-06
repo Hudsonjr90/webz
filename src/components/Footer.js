@@ -156,7 +156,7 @@ const Footer = () => {
             </a>
           </SocialIcons>
           <Contact>
-            <Button to="">
+            <Button to="/">
               Hudson Kennedy
             </Button>
           </Contact>
