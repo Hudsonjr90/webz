@@ -1,97 +1,136 @@
 import React from 'react';
-import styled from 'styled-components';
-import { menuData } from '../data/MenuData';
-import { Button } from './Button';
+import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
-import { FaTimes } from 'react-icons/fa';
+import { IoMdArrowRoundForward } from 'react-icons/io';
+import HomeOne from '../images/home-1.jpg';
+import HomeTwo from '../images/home-2.jpg';
 
-const DropdownContainer = styled.div`
-  position: fixed;
-  z-index: 999;
+const Section = styled.section`
   width: 100%;
   height: 100%;
-  background: #cd853f;
-  display: grid;
-  align-items: center;
-  top: 0;
-  left: 0;
-  transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  padding: 10rem calc((100vw - 1300px) / 2);
 `;
 
-const Icon = styled.div`
-  position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
-  background: transparent;
-  font-size: 2rem;
-  cursor: pointer;
-  outline: none;
+const Container = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 2rem 1rem;
 `;
 
-const CloseIcon = styled(FaTimes)`
-  color: #000d1a;
-`;
+const Heading = styled.div`
+  font-size: 1.5rem;
+  padding: 2rem 1rem;
+  margin-bottom: 40px;
 
-const DropdownWrapper = styled.div``;
-
-const DropdownMenu = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 80px);
-  text-align: center;
-  margin-bottom: 4rem;
-
-  @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(4, 60px);
+  @media screen and (max-width: 768px) {
+    text-align: start;
   }
 `;
 
-const DropdownLink = styled(Link)`
+const InfoRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const InfoWrap = styled.div`
+  padding: 0rem 1rem;
+  min-height: 550px;
+  height: 100%;
+
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+`;
+
+const InfoLink = styled(Link)`
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1.5rem;
   text-decoration: none;
-  list-style: none;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+  color: #000d1a;
+  width: 140px;
+  transition: 0.3s;
 
   &:hover {
-    color: #000d1a;
+    transform: translateY(-2px);
   }
 `;
 
-const BtnWrap = styled.div`
-  display: flex;
-  justify-content: center;
+const Arrow = styled(IoMdArrowRoundForward)`
+  margin-left: 10px;
 `;
 
-const Dropdown = ({ isOpen, toggle }) => {
+const Listings = () => {
   return (
-    <DropdownContainer isOpen={isOpen} onClick={toggle}>
-      <Icon onClick={toggle}>
-        <CloseIcon />
-      </Icon>
-      <DropdownWrapper>
-        <DropdownMenu>
-          {menuData.map((item, index) => (
-            <DropdownLink to={item.link} key={index}>
-              {item.title}
-            </DropdownLink>
-          ))}
-        </DropdownMenu>
-        <BtnWrap>
-          <Button primary='true' round='true' big='true' to='/footer'>
-            Fale Conosco
-          </Button>
-        </BtnWrap>
-      </DropdownWrapper>
-    </DropdownContainer>
+    <Section>
+      <Container>
+        <Heading>
+          <h1
+            data-aos='fade-right'
+            data-aos-duration='1000'
+            data-aos-once='true'
+            data-aos-anchor-placement='center bottom'
+          >
+            Mantenha a postura
+          </h1>
+        </Heading>
+        <InfoRow>
+          <InfoWrap
+            data-aos='zoom-out-up'
+            data-aos-duration='1200'
+            data-aos-once='true'
+            data-aos-anchor-placement='center bottom'
+          >
+            <Image src={HomeOne} alt='home' />
+            <h2>A ergonomia se preocupa com as condições gerais de trabalho, tais como, a postura, a iluminação, os ruídos e a temperatura, 
+              que são conhecidas como causadores de males na saúde física e mental</h2>
+              
+              <button><a href="https://www.dt3office.com.br/cavalleria/" rel="noopener noreferrer" target="_blank"><p>Cadeiras Ergonômicas</p></a></button>
+            
+          </InfoWrap>
+          <InfoWrap
+            data-aos='zoom-out-down'
+            data-aos-duration='1200'
+            data-aos-once='true'
+            data-aos-anchor-placement='center bottom'
+          >
+            <Image
+              src={HomeTwo}
+              alt='home'
+              css={`
+                margin-top: 120px;
+                @media screen and (max-width: 768px) {
+                  margin-top: 0px;
+                }
+              `}
+            />
+            <h2>O custo individual é minimizado através da ergonomia, que remove aspectos do trabalho que, à longo prazo, possam provocar ineficiências ou os mais variados tipos de incapacidades físicas.</h2>
+            <button><a href="https://www.dt3office.com.br/scuderia/" rel="noopener noreferrer" target="_blank"><p>Cadeiras Ergonômicas</p></a></button>
+          </InfoWrap>
+        </InfoRow>
+      </Container>
+    </Section>
   );
 };
 
-export default Dropdown;
+
+
+export default Listings;
