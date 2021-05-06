@@ -102,6 +102,8 @@ const Listings = () => {
             <Image src={HomeOne} alt='home' />
             <h2>A ergonomia se preocupa com as condições gerais de trabalho, tais como, a postura, a iluminação, os ruídos e a temperatura, 
               que são conhecidas como causadores de males na saúde física e mental</h2>
+              
+              <button><a href="https://www.dt3office.com.br/cavalleria/" rel="noopener noreferrer" target="_blank"><p>Cadeiras Ergonômicas</p></a></button>
             
           </InfoWrap>
           <InfoWrap
@@ -120,14 +122,15 @@ const Listings = () => {
                 }
               `}
             />
-            <h2>O custo individual é minimizado através da ergonomia, que remove aspectos do trabalho que, à longo prazo, possam provocar ineficiências ou os mais variados tipos de incapacidades físicas.
-</h2>
-            
+            <h2>O custo individual é minimizado através da ergonomia, que remove aspectos do trabalho que, à longo prazo, possam provocar ineficiências ou os mais variados tipos de incapacidades físicas.</h2>
+            <button><a href="https://www.dt3office.com.br/scuderia/" rel="noopener noreferrer" target="_blank"><p>Cadeiras Ergonômicas</p></a></button>
           </InfoWrap>
         </InfoRow>
       </Container>
     </Section>
   );
 };
+
+
 
 export default Listings;
