@@ -103,7 +103,7 @@ const Navbar = ({ toggle }) => {
 
   return (
     <Nav style={style}>
-      <Logo to="/">DT3 WORK</Logo>
+      <Logo to="/"><strong><h2><strong>DT3 WORK</strong></h2></strong></Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
